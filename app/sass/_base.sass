@@ -1,0 +1,52 @@
+html
+  line-height: $mainLineHeight
+  font-size: $baseFontSize + px
+  color: $baseFontColor
+
+body
+  font-family: "PTSansCaption", sans-serif
+  font-size: 18px
+  font-weight: normal
+  background: $backgroundWhite
+  color: $baseFontColor
+  line-height: 1.4
+
+.content
+  position: relative
+  max-width: rem(1280) //если нужно ограничить ширину основного контента
+  height: auto
+  margin: 0 auto
+  background: $backgroundWhite
+  overflow: hidden
+
+.wrapper
+  position: relative
+  width: 100%
+  max-width: rem(960)
+  height: 100%
+  margin: 0 auto
+  @media (max-width: $smallDesktop)
+    padding: 0 rem(40)
+  @media (max-width: $mobile)
+    padding: 0 rem(30)
+  @media (max-width: $bigPhone)
+    padding: 0 rem(15)
+
+h2
+  @include font(36)
+  @media (max-width: $bigPhone)
+    @include font(21)
+
+h3
+  @include font(24)
+  @media (max-width: $bigPhone)
+    @include font(18)
+
+h4
+  @include font(12)
+  font-weight: bold
+
+p
+  @include font(15)
+  line-height: rem(21)
+

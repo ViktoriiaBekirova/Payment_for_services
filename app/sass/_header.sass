@@ -1,0 +1,131 @@
+.header-content
+  position: fixed
+  top: 0
+  width: 100%
+  max-width: inherit
+  padding: 0 rem(14) 0 rem(31)
+  background: $backgroundWhite
+  z-index: 10
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: rem(13) 0
+  width: 100%
+  height: 100%
+  @media (max-width: $bigPhone)
+    padding: rem(5) 0 rem(6) 0
+  &__logo
+    position: absolute
+    width: rem(293)
+    height: rem(43)
+    top: rem(13)
+    left: 50%
+    transform: translate(-50%)
+    @media (max-width: $smallTablet)
+      position: relative
+      top: auto
+      left: auto
+      transform: none
+    @media (max-width: $bigPhone)
+      width: rem(197)
+      height: rem(29)
+  &__link
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    @media (max-width: $smallTablet)
+      justify-content: flex-end
+      width: auto
+
+.open-menu
+  position: relative
+  display: none
+  width: rem(19)
+  height: rem(15)
+  transition: 0.5s ease
+  @media (max-width: $smallTablet)
+    display: block
+  &.transform
+    transform: rotate(180deg)
+
+.menu
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  zoom: 1
+  @media (max-width: $smallTablet)
+    position: absolute
+    display: none
+    top: rem(66)
+    right: 0
+    flex-direction: column
+    align-items: flex-end
+    width: auto
+    padding: rem(15)
+    background-color: $backgroundWhite
+    z-index: 2
+  @media (max-width: $bigPhone)
+    top: rem(40)
+
+.list
+  cursor: pointer
+  @media (max-width: $smallTablet)
+    margin-bottom: rem(20)
+  &__headline
+    position: relative
+    color: $textBlueColor
+    transition: 0.3s ease
+    &:after
+      content: ""
+      position: absolute
+      top: 40%
+      width: rem(7)
+      height: rem(6)
+      margin-left: rem(9)
+      background-image: url("../img/menu_icon.png")
+      background-repeat: no-repeat
+      background-size: contain
+      transition: 0.5s ease
+    &.open-list
+      &:after
+        transform: rotate(180deg)
+    &:hover
+      font-weight: bold
+  &__nav
+    position: absolute
+    display: none
+    left: 0
+    padding: rem(15) rem(15) rem(15) rem(31)
+    background-color: $backgroundWhite
+    zoom: 1
+    @media (max-width: $smallTablet)
+      position: relative
+      padding: rem(10) 0 0 0
+    & > li > a
+      @include font(14)
+      color: $textBlueColor
+    & > li > a:hover
+      font-weight: bold
+
+.personal-area
+  display: flex
+  justify-content: center
+  align-items: center
+  width: rem(177)
+  height: rem(40)
+  border: 2px solid $textBlueColor
+  color: $textBlueColor
+  cursor: pointer
+  transition: 0.3s ease
+  &:hover
+    font-weight: bold
+
+
+
+
+

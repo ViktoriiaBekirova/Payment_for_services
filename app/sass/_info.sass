@@ -1,0 +1,42 @@
+.info
+  position: relative
+  &__nav
+    padding: rem(50) 0 rem(78) 0
+    @media (max-width: $smallTablet)
+      padding: rem(33) 0 rem(22) 0
+  &__shape
+    position: absolute
+    right: rem(-76)
+    top: rem(65)
+    width: rem(20)
+    height: rem(22)
+    @media (max-width: $smallDesktop)
+      display: none
+  &__header
+    margin-bottom: rem(20)
+    text-align: center
+    @media (max-width: $smallTablet)
+      display: none
+  &__header-mobile
+    display: none
+    text-align: center
+    @media (max-width: $smallTablet)
+      display: block
+  &__list
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    @media (max-width: $smallTablet)
+      display: none
+  &__list li
+    margin-right: rem(36)
+    margin-bottom: rem(11)
+  &__list li > a
+    line-height: 1
+    color: $textBlueLink
+    border-bottom: 1px dotted $textBlueLink
+    cursor: pointer
+    &:hover
+      font-weight: bold
+

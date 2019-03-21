@@ -1,0 +1,109 @@
+.footer-content
+  position: relative
+  padding: 0 rem(31) 0 rem(36)
+  background: $backgroundFooter
+  @media (max-width: $smallTablet)
+    padding: 0 rem(30)
+
+.footer
+  position: relative
+  display: flex
+  justify-content: space-between
+  padding: rem(47) 0 rem(36) 0
+  @media (max-width: $bigTablet)
+    flex-wrap: wrap
+  @media (max-width: $smallTablet)
+    padding: rem(19) 0 rem(14) 0
+
+.footer-info
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  @media (max-width: $smallTablet)
+    width: 100%
+    justify-content: flex-start
+    align-items: center
+    text-align: center
+  &__text
+    color: $textBlackColor
+    &_company
+      max-width: rem(215)
+      @media (max-width: $smallTablet)
+        max-width: 100%
+        @include font(13)
+        line-height: rem(18)
+    &_mobile
+      display: none
+      margin-bottom: rem(12)
+      @media (max-width: $smallTablet)
+        display: block
+        @include font(13)
+        line-height: rem(18)
+  &__img
+    position: relative
+    width: rem(80)
+    height: rem(52)
+    cursor: pointer
+
+.footer-nav
+  display: flex
+  @media (max-width: $smallTablet)
+    display: none
+  &__link
+    margin-right: rem(110)
+  &__menu li > a
+    margin-bottom: rem(7)
+    @include font(15)
+    line-height: rem(21)
+    text-decoration: underline
+    color: $textLinkFooter
+    &:hover
+      font-weight: bold
+  &__tel > a
+    font-weight: normal
+    line-height: 1
+    text-decoration: underline
+    color: $textLinkFooter
+    &:hover
+      font-weight: bold
+  &__tel-text
+    margin-bottom: rem(22)
+    font-weight: normal
+    color: $textBlackColor
+
+.footer-additionally
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  @media (max-width: $bigTablet)
+    width: 100%
+    margin-top: rem(40)
+  @media (max-width: $smallTablet)
+    display: none
+  &__text
+    max-width: rem(240)
+    margin-bottom: rem(12)
+    text-align: right
+    color: $textBlackColor
+  &__img
+    position: relative
+    width: rem(98)
+    height: rem(34)
+    cursor: pointer
+
+.footer-shape
+  display: none
+  position: absolute
+  right: 0
+  bottom: rem(14)
+  width: rem(20)
+  height: rem(22)
+  @media (max-width: $smallTablet)
+    display: block
+
+
+
+
+
+
+
